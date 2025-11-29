@@ -17,6 +17,7 @@ if __name__ == '__main__':
     print(sm)  # Current state: q5
     sm.transition()
     print(sm)  # Current state: q6
+    sm.transition()
     
     sm2 = StateMachine('q4')
     print(sm2) # Current state: q4

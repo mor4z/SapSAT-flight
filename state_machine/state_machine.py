@@ -21,9 +21,8 @@ class StateMachine:
             "q3": "q4",
             "q4": "q5",
             "q5": "q6",
+            "q6": "q6"
         }
-        if self.state== "q6":
-            raise ValueError()
 
         new_state = allowed.get(self.state)
         self.state = new_state
