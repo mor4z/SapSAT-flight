@@ -40,6 +40,7 @@ class StateMachine:
             "q3": 9,
             "q4": 10,
             "q5": 11,
+            "q6": 12,
         }
         if result[self.state] == variable:
             return True
@@ -52,28 +53,28 @@ class StateMachine:
             output = funzione()  # execute the function
             mark=self.check(output) # check if the it needs a change in the status
             if mark:
+                print("state=",self.state)
                 new_state=self.transition()
-                if new_state == None:
+
+                if self.state == "q6":
+
                     break
 
                 self.state = new_state
+                print("state_changed=", self.state)
                 continue
-
-
-
-
-
-
+        print("finished")
 
 
     def __str__(self):
         return f"Current state: {self.state}"
 
-    def func1(self): return self.state
-    def func2(self): return self.state
-    def func3(self): return self.state
-    def func4(self): return self.state
-    def func5(self): return self.state
-    def func6(self): return self.state
-    def func7(self): return self.state
+    def func1(self): return 5
+    def func2(self): return 7
+    def func3(self): return 8
+    def func4(self): return 9
+    def func5(self): return 10
+    def func6(self): return 11
+    def func7(self): return 12
+
 
